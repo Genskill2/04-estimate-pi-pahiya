@@ -7,7 +7,7 @@ float wallis_pi(int);
 
 int main(void) {
   float pi;
-  for (int i=0; i<5; i++) {
+  for (int i=1; i<5; i++) {
     pi = wallis_pi(i);
     if (!(fabs(pi - M_PI) > 0.15)) {
       printf("Estimate with just %d iterations is %f which is too accurate.\n", i, pi);
@@ -27,12 +27,13 @@ float wallis_pi (int n )
 {
   float pi=1;
   float a,b,comp_pi;
-  for (int i=1; i<n;i++)
+   
+   for(int i=1;i<n+1;i++)
   {
-      a= 4*i*i;
-      b=a/(a-1);
+    a= 4*i*i;
+    b=a/(a-1);
   
-      pi = pi*b;
+    pi = pi*b;
   }
   return (2*pi);
     }

@@ -33,4 +33,4 @@ float wallis_pi (int n )
       pi = pi*comp_pi;
   }
   return pi;
-}
+    }

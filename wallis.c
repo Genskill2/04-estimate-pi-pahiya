@@ -30,16 +30,14 @@ int main(void) {
 float wallis_pi (int n )
 {
   float pi=1;
-  float a,b,comp_pi;
-   
+  float a,b,comp_pi; 
    for(int i=1;i<n+1;i++)
-  {
-    a= 4*i*i;
-    b=a/(a-1);
+   {
+     a= 4*i*i;
+     b=a/(a-1);
+     pi = pi*b; 
+   }
   
-    pi = pi*b;
-   
-  }
   if(n!=0)
   return (2*pi);
   else
